@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shorten URL | SnapLink</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h2 class="logo">↗ Snap<span>Link</span></h2>
+
+            <p class="menu-title">MENU</p>
+
+            <nav>
+                <a href="dashboard.html" class="nav-link">
+                    ▦ Dashboard
+                </a>
+
+                <a href="shorten.html" class="nav-link active">
+                    ↗ Shorten URL
+                </a>
+
+                <a href="analytics.html" class="nav-link">
+                    ▥ Analytics
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <p class="menu-title">PROJECT</p>
+                <h3>SnapLink</h3>
+                <p>Short Links. Smart Insights.</p>
+            </div>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="page-header">
+                <div>
+                    <p class="small-heading">CREATE A LINK</p>
+
+                    <h1>Shorten URL</h1>
+
+                    <p class="subtitle">
+                        Turn long links into short, shareable URLs.
+                    </p>
+                </div>
+            </header>
+
+            <!-- URL Form -->
+            <section class="card shorten-card">
+
+                <h2>Create a Short Link</h2>
+
+                <p>Enter the original URL below.</p>
+
+                <form id="shortenForm">
+
+                    <label for="originalUrl">
+                        Destination URL
+                    </label>
+
+                    <input
+                        type="url"
+                        id="originalUrl"
+                        placeholder="https://example.com/your-long-link"
+                        required
+                    >
+
+                    <button
+                        type="submit"
+                        id="shortenButton"
+                    >
+                        Shorten URL
+                    </button>
+
+                </form>
+
+                <p id="message" class="message"></p>
+
+                <!-- Generated Link -->
+                <div id="resultBox" class="result-box" hidden>
+
+                    <label>Your short link</label>
+
+                    <div class="result-row">
+
+                        <a
+                            id="shortUrl"
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        ></a>
+
+                        <button
+                            type="button"
+                            id="copyButton"
+                        >
+                            Copy
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <footer>
+                © 2026 SnapLink | Short Links. Smart Insights.
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="js/shorten.js"></script>
+
+</body>
+</html>

@@ -1,11 +1,11 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+"name": "snaplink-backend",
+"version": "1.0.0",
+"description": "SnapLink URL Shortener with Click Analytics",
+"main": "server.js",
+"scripts": {
+"start": "node server.js"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",

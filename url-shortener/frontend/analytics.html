@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analytics | SnapLink</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h2 class="logo">↗ Snap<span>Link</span></h2>
+
+            <p class="menu-title">MENU</p>
+
+            <nav>
+                <a href="dashboard.html" class="nav-link">
+                    ▦ Dashboard
+                </a>
+
+                <a href="shorten.html" class="nav-link">
+                    ↗ Shorten URL
+                </a>
+
+                <a href="analytics.html" class="nav-link active">
+                    ▥ Analytics
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <p class="menu-title">PROJECT</p>
+                <h3>SnapLink</h3>
+                <p>Short Links. Smart Insights.</p>
+            </div>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="page-header">
+                <div>
+                    <p class="small-heading">LINK PERFORMANCE</p>
+
+                    <h1>Link Analytics</h1>
+
+                    <p class="subtitle">
+                        Track clicks on your shortened URLs.
+                    </p>
+                </div>
+            </header>
+
+            <!-- Analytics Card -->
+            <section class="card">
+
+                <h2>All Short Links</h2>
+
+                <p>
+                    Check how many times each short link has been opened.
+                </p>
+
+                <div class="table-container">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Short Link</th>
+                                <th>Original URL</th>
+                                <th>Total Clicks</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="analyticsTable">
+                            <tr>
+                                <td colspan="3" class="message">
+                                    Loading analytics...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <p id="analyticsMessage" class="message"></p>
+
+            </section>
+
+            <footer>
+                © 2026 SnapLink | Short Links. Smart Insights.
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="js/analytics.js"></script>
+
+</body>
+</html>
