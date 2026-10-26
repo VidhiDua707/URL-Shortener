@@ -29,9 +29,18 @@ const server = http.createServer((req, res) => {
     }
 
     // Open dashboard when visiting the root URL
-    let requestedPath = decodeURIComponent(
-        new URL(req.url, "http://localhost").pathname
-    );
+    let requestedPath;
+
+    try {
+        requestedPath = decodeURIComponent(
+            new URL(req.url, "http://localhost").pathname
+        );
+    } catch (error) {
+        // Bad URL such as /%  - do not crash the server
+        res.writeHead(400, { "Content-Type": "text/plain" });
+        res.end("Bad request");
+        return;
+    }
 
     if (requestedPath === "/") {
         requestedPath = "/dashboard.html";
